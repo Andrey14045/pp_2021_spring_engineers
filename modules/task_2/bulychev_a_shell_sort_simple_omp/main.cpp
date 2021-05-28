@@ -31,7 +31,7 @@ TEST(Parallel_OMP, compare_seq_and_parall_with_bug_size) {
 }
 
 TEST(Parallel_OMP, check_time) {
-    std::vector<double> vec = getRandomVector(100);
+    std::vector<double> vec = getRandomVector(1000000);
 
     double start = omp_get_wtime();
     std::vector<double> omp = Shell_sort_OMP(vec);
